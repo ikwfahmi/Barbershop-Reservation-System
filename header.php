@@ -5,7 +5,7 @@
         <title>Halaman <?php echo $_SESSION['judul']; unset($_SESSION['judul']);?></title>
         <link href="http://localhost/Barbershop-Reservation-System/assets/css/bootstrap.css" rel="stylesheet">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                         <a class="navbar-brand" href="">
