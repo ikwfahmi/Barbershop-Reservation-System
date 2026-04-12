@@ -1,6 +1,27 @@
 <?php
 
-    $conn = mysqli_connect("localhost", "root", "", "barber_db");
+    $dbHost = "localhost";
+    $dbUser = "root";
+    $dbPass = "";
+    $dbName = "barber_db";
+
+    $conn = mysqli_connect($dbHost, $dbUser, $dbPass);
+
+    if(!$conn){
+        die("Koneksi ke MySQL gagal: " . mysqli_connect_error());
+    }
+
+    mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS `$dbName` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    mysqli_select_db($conn, $dbName);
+    mysqli_set_charset($conn, "utf8mb4");
+
+    mysqli_query($conn, "CREATE TABLE IF NOT EXISTS users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) NOT NULL UNIQUE,
+        password VARCHAR(255) NOT NULL,
+        nama_lengkap VARCHAR(100) NOT NULL,
+        role ENUM('user','admin') NOT NULL DEFAULT 'user'
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
 
     function query($query){
         global $conn;
