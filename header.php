@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="UTF-8">
-        <title>Halaman <?php echo $_SESSION['judul']; unset($_SESSION['judul']);?></title>
+        <title>BarberShop | <?php echo $_SESSION['judul']; unset($_SESSION['judul']);?></title>
         <link href="http://localhost/Barbershop-Reservation-System/assets/css/bootstrap.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
