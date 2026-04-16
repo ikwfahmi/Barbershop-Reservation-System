@@ -16,19 +16,15 @@
   </div>
   <form action="functions/submit.php" method="post">
     <div class="mb-3">
-      <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
       <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan Nama Lengkap" required>
     </div>
     <div class="mb-3">
-      <label for="username" class="form-label">Username</label>
       <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required>
     </div>
     <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
       <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password" required>
     </div>
     <div class="mb-3">
-      <label for="password2" class="form-label">Konfirmasi Password</label>
       <input type="password" class="form-control" id="password2" name="password2" placeholder="Konfirmasi Password" required>
     </div>
     <button type="button" class="btn btn-danger" onclick="history.back()">Kembali</button>

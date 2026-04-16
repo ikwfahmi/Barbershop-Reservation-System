@@ -65,6 +65,7 @@
             if(password_verify($password, $row['password'])){
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $row['nama_lengkap'];
+                $_SESSION['role'] = $row['role'];
                 return true;
             }
         }

@@ -18,10 +18,23 @@
                                 <div class="navbar-nav">
                                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                                         <a class="nav-link" href="">About</a>
-                                </div>
-                                <div class="collapse navbar-collapse">
                                         <?php if(isset($_SESSION['login'])):?>
+                                                <a class="nav-link" href="">Kapster</a>
+                                                <a class="nav-link" href="">Layanan</a>
+                                                <div class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: inherit;">
+                                                                Pesanan
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Menunggu</a></li>
+                                                        <li><a class="dropdown-item" href="#">Selesai</a></li>
+                                                        </ul>
+                                                </div>
+                                        <?php endif;?>
+                                        
+                                </div>
                                         <ul class="navbar-nav ms-auto">
+                                                <?php if(isset($_SESSION['login'])):?>
                                                 <li class="nav-item">
                                                         <a class="nav-link" ><?php echo $_SESSION['user']; ?></a>
                                                 </li>
@@ -36,7 +49,6 @@
                                                 </li>
                                         </ul>
                                         <?php endif;?>
-                                </div>
                         </div>
                 </div>
         </nav>
