@@ -1,8 +1,11 @@
 <?php
     session_start();
-    $_SESSION = [];
-    session_unset();
-    session_destroy();
-    header("Location: login.php");
-    exit;
+    require 'autoload.php';
+    $database = new Database();
+    $db = $database->connect();
+    $user = new User($db);
+    if($user->logout()){
+        header("Location: login.php");
+        exit;
+    }
 ?>

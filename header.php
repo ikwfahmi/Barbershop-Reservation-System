@@ -3,13 +3,13 @@
 <head>
         <meta charset="UTF-8">
         <title>BarberShop | <?php echo $_SESSION['judul']; unset($_SESSION['judul']);?></title>
-        <link href="http://localhost/Barbershop-Reservation-System/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="http://localhost/Barbershop-Reservation-System/public/css/bootstrap.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                         <a class="navbar-brand" href="">
-                                <img src="http://localhost/Barbershop-Reservation-System/assets/img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                                <img src="http://localhost/Barbershop-Reservation-System/public/img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
                                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                                         <a class="nav-link" href="">About</a>
                                         <?php if(isset($_SESSION['login'])):?>
-                                                <a class="nav-link" href="">Kapster</a>
+                                                <a class="nav-link" href="kapster.php">Kapster</a>
                                                 <a class="nav-link" href="">Layanan</a>
                                                 <div class="nav-item dropdown">
                                                         <a class="nav-link dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: inherit;">
