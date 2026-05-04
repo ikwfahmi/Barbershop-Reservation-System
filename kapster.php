@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(!$_SESSION['login'])header("Location: login.php");
-    $_SESSION['judul'] = 'Dashboard';
+    $_SESSION['judul'] = 'Kapster';
     require 'header.php';
     require 'autoload.php';
     $database = new Database();
