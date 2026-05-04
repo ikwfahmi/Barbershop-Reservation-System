@@ -36,7 +36,7 @@
                                         <ul class="navbar-nav ms-auto">
                                                 <?php if(isset($_SESSION['login'])):?>
                                                 <li class="nav-item">
-                                                        <a class="nav-link" ><?php echo $_SESSION['user']; ?></a>
+                                                        <a class="nav-link" ><?php echo htmlspecialchars($_SESSION['user']); ?></a>
                                                 </li>
                                                 <li class="nav-item">
                                                         <a class="btn btn-danger" href="logout.php">Logout</a>
@@ -44,9 +44,11 @@
                                         </ul>
                                         <?php else:?>
                                         <ul class="navbar-nav ms-auto">
+                                                <?php if(basename($_SERVER['PHP_SELF']) != 'login.php'): ?>
                                                 <li class="nav-item">
                                                         <a class="btn btn-success" href="login.php">Login</a>
                                                 </li>
+                                                <?php endif; ?>
                                         </ul>
                                         <?php endif;?>
                         </div>
