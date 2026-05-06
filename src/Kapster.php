@@ -51,6 +51,19 @@ class Kapster {
         return $newFile; 
     }
 
+    public function update_data(){
+
+    }
+
+    public function getKapster($id){
+        $query = "SELECT * FROM " . $this->table . "WHERE id = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_assoc();
+    }
+
     public function getAllKapsters() {
         $query = "SELECT * FROM " . $this->table;
         $result = $this->db->query($query);

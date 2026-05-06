@@ -41,7 +41,7 @@ class User {
     }
 
     public function login($data) {
-        $username = strtolower(stripslashes($data['username']));
+        $username = strtolower($data['username']);
         $password = $data['password'];
 
         $query = "SELECT * FROM " . $this->table . " WHERE username = ?";

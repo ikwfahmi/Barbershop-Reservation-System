@@ -17,21 +17,18 @@
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
                                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                                        <a class="nav-link" href="">About</a>
-                                        <?php if(isset($_SESSION['login'])):?>
-                                                <a class="nav-link" href="kapster.php">Kapster</a>
-                                                <a class="nav-link" href="">Layanan</a>
-                                                <div class="nav-item dropdown">
-                                                        <a class="nav-link dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: inherit;">
-                                                                Pesanan
-                                                        </a>
-                                                        <ul class="dropdown-menu">
+                                        <a class="nav-link" href="kapster.php">Kapster</a>
+                                        <a class="nav-link" href="">Layanan</a>
+                                        <div class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: inherit;">
+                                                        Pesanan
+                                                </a>
+                                                <ul class="dropdown-menu">
                                                         <li><a class="dropdown-item" href="#">Menunggu</a></li>
                                                         <li><a class="dropdown-item" href="#">Selesai</a></li>
-                                                        </ul>
-                                                </div>
-                                        <?php endif;?>
-                                        
+                                                </ul>
+                                        </div>
+                                        <a class="nav-link" href="">About</a>
                                 </div>
                                         <ul class="navbar-nav ms-auto">
                                                 <?php if(isset($_SESSION['login'])):?>
